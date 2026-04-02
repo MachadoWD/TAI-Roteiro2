@@ -19,7 +19,7 @@ alunos.append(aluno2)
 
 @app.route("/alunos", methods=["GET"])
 def listar_alunos():
-    return jsonify([aluno.to_dict() for aluno in alunos])
+    return jsonify([aluno.to_dict() for aluno in alunos]), 200
 
 if __name__ == "__main__":
     app.run(debug=True)
